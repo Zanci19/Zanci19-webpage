@@ -3,67 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Dipshit — Zanci19</title>
+    <title>Zanci19 — Portfolio</title>
+    <meta name="description" content="Interactive portfolio for Zanci19 with featured projects and smooth animated sections.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap">
-        <nav class="topbar">
-            <div class="logo">Zanci19</div>
-            <div class="navlinks">
-                <a href="#about">About</a>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+        <nav class="nav shell">
+            <a class="logo" href="#top">Zanci19</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <div class="nav-links" id="nav-links">
                 <a href="#projects">Projects</a>
-                <a href="#confessions">Confessions</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
+    </header>
 
-        <section class="hero">
-            <div class="hero-lines">
-                <div class="line line-1">Hey, I'm</div>
-                <div class="line line-2">The professional dipshit</div>
-                <div class="line line-3">Zanci19</div>
+    <main>
+        <section class="hero shell" id="home">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Creative developer portfolio</p>
+                <h1>Building weird ideas into working products.</h1>
+                <p class="hero-text">I'm Zanci19. I prototype fast, ship often, and turn experiments into usable tools. This version is inspired by modern interactive portfolios and tailored to my own style.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">View Projects</a>
+                    <a class="btn btn-ghost" href="https://github.com/Zanci19" target="_blank" rel="noreferrer noopener">GitHub Profile</a>
+                </div>
+                <ul class="stats" aria-label="Portfolio quick stats">
+                    <li>
+                        <strong class="count" data-target="30">0</strong>
+                        <span>Public Repos</span>
+                    </li>
+                    <li>
+                        <strong class="count" data-target="6">0</strong>
+                        <span>Languages Used</span>
+                    </li>
+                    <li>
+                        <strong class="count" data-target="100">0</strong>
+                        <span>Ship Energy</span>
+                    </li>
+                </ul>
             </div>
-            <div class="hero-sub">I write code in various languages.</div>
-            <div class="hero-cta">
-                <button class="cta" id="honesty">Tell me the truth</button>
-                <div id="rating" class="rating" aria-hidden="true">[----------] 0%</div>
+            <div class="hero-visual reveal" aria-hidden="true">
+                <div class="glow glow-a"></div>
+                <div class="glow glow-b"></div>
+                <div class="glass-card">
+                    <p>Now building</p>
+                    <h2>MacroPal + multiplayer tools</h2>
+                    <small>Update this note with your latest focus.</small>
+                </div>
             </div>
         </section>
 
-        <main>
-            <section id="about" class="card reveal">
-                <h2>About</h2>
-                <p class="muted">A little about me, but not too much.</p>
-                <p>I write chaotic but effective code, collect half-done projects, and maintain a professional level of nonsense.</p>
+        <section class="shell section" id="projects">
+            <div class="section-head reveal">
+                <p class="eyebrow">Featured work</p>
+                <h2>Projects from my GitHub profile</h2>
+                <p>These are linked directly so you can explore each repo.</p>
+            </div>
 
-                <h3>Skills</h3>
-                <div class="list">
-                    <div class="skill">JavaScript — 90% coffee, 10% logic</div>
-                    <div class="skill">HTML/CSS — I promise it's valid-ish</div>
-                    <div class="skill">DevOps — I pushed the button once</div>
-                </div>
-            </section>
+            <div class="projects-grid">
+                <article class="project-card reveal tilt">
+                    <h3>MacroPal</h3>
+                    <p>TypeScript utility app and automation tooling project. Replace with your exact product summary.</p>
+                    <div class="tags"><span>TypeScript</span><span>Automation</span></div>
+                    <a href="https://github.com/Zanci19/MacroPal" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
 
-            <section id="projects" class="card reveal">
-                <h2>Projects</h2>
-                <p class="muted">A curated list of things I shoved together.</p>
-                <ul>
-                    <li><strong>ZanciBot</strong> — A chatbot that gives brutally honest answers.</li>
-                    <li><strong>HalfDone</strong> — A collection of abandoned masterpieces.</li>
-                    <li><strong>SnackOverflow</strong> — StackOverflow, but with snacks instead of answers.</li>
+                <article class="project-card reveal tilt">
+                    <h3>UndertaleMultiplayer</h3>
+                    <p>Browser-based multiplayer experiment inspired by Undertale systems and shared sessions.</p>
+                    <div class="tags"><span>HTML</span><span>Multiplayer</span></div>
+                    <a href="https://github.com/Zanci19/UndertaleMultiplayer" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+
+                <article class="project-card reveal tilt">
+                    <h3>UndertaleMultiplayerData</h3>
+                    <p>Supporting data and frontend assets for the multiplayer prototype ecosystem.</p>
+                    <div class="tags"><span>HTML</span><span>Game Data</span></div>
+                    <a href="https://github.com/Zanci19/UndertaleMultiplayerData" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+
+                <article class="project-card reveal tilt">
+                    <h3>StickmanFight</h3>
+                    <p>Arcade-style stickman combat concept with browser game mechanics.</p>
+                    <div class="tags"><span>HTML</span><span>Game Prototype</span></div>
+                    <a href="https://github.com/Zanci19/StickmanFight" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+
+                <article class="project-card reveal tilt">
+                    <h3>GoonFM</h3>
+                    <p>Website experience for GoonFM radio with frontend interaction and branding experiments.</p>
+                    <div class="tags"><span>JavaScript</span><span>Web</span></div>
+                    <a href="https://github.com/Zanci19/GoonFM" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+
+                <article class="project-card reveal tilt">
+                    <h3>GoonNet</h3>
+                    <p>Network-focused C# project. Add your exact architecture and purpose here.</p>
+                    <div class="tags"><span>C#</span><span>Networking</span></div>
+                    <a href="https://github.com/Zanci19/GoonNet" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+
+                <article class="project-card reveal tilt">
+                    <h3>FabLab Presence System</h3>
+                    <p>Hardware/software presence tracking system developed for a lab environment.</p>
+                    <div class="tags"><span>C</span><span>Embedded</span></div>
+                    <a href="https://github.com/Zanci19/FabLab-Presence-System" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+
+                <article class="project-card reveal tilt">
+                    <h3>zbot</h3>
+                    <p>C++ bot project for automation and custom command workflows. Replace with specifics.</p>
+                    <div class="tags"><span>C++</span><span>Bot</span></div>
+                    <a href="https://github.com/Zanci19/zbot" target="_blank" rel="noreferrer noopener">Open repository →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="shell section two-col" id="about">
+            <div class="panel reveal">
+                <p class="eyebrow">About me</p>
+                <h2>Fast iteration, high curiosity.</h2>
+                <p>Add your personal bio here: what you build, what you enjoy, and what you want to do next.</p>
+                <p>Current stack focus: JavaScript/TypeScript, C#, C++, and interactive web experiences.</p>
+            </div>
+            <div class="panel reveal" id="process">
+                <p class="eyebrow">How I work</p>
+                <ul class="timeline">
+                    <li><span>01</span>Sketch concept and scope with quick constraints.</li>
+                    <li><span>02</span>Ship an MVP early and validate with real use.</li>
+                    <li><span>03</span>Polish animation, UX, and reliability next.</li>
+                    <li><span>04</span>Iterate in public through repository updates.</li>
                 </ul>
-            </section>
+            </div>
+        </section>
+    </main>
 
-            <section id="confessions" class="card reveal">
-                <h2>Confessions</h2>
-                <p id="confession" class="muted">Press the button and receive unfiltered truthiness.</p>
-            </section>
-
-            <footer>
-                Made with sarcasm · <a href="#" class="accent">Email me</a>
-            </footer>
-        </main>
-    </div>
+    <footer class="shell footer" id="contact">
+        <p>Want to collaborate? Replace this with your real contact links.</p>
+        <div class="footer-links">
+            <a href="https://github.com/Zanci19" target="_blank" rel="noreferrer noopener">GitHub</a>
+            <a href="#top">Back to top</a>
+            <a href="mailto:your-email@example.com">your-email@example.com</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
